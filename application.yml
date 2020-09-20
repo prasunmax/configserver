@@ -1,0 +1,16 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER:http://registry:8000/eureka/}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    mongo:
+      enabled: false
+server:
+  port: 8000
