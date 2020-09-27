@@ -14,3 +14,7 @@ management:
       enabled: false
 server:
   port: 8000
+
+eureka:
+  client:
+    enabled: true
