@@ -1,0 +1,31 @@
+spring:
+  mongodb:
+    uri: mongodb://root:example@localhost/assignment_user?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false&maxPoolSize=50&connectTimeoutMS=2000
+    database: userAssignment
+  cloud:
+    gateway:
+      routes:
+        - id: training-service
+          uri: lb://training-service
+          predicates:
+            - Path=/api/training/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: training-service
+                fallbackuri: forward:/trainingServiceFallback
+        - id: finance-service
+          uri: lb://finance-service
+          predicates:
+            - Path=/api/finance/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: finance-service
+                fallbackuri: forward:/financeServiceFallback
+hystrix:
+  command:
+    fallback:
+      isolation:
+        thread:
+          timeoutInMilliseconds: 5000 
