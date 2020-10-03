@@ -1,4 +1,4 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://root:example@mongo:27017/resourcedb?authSource=admin&retryWrites=true&w=majority
+      uri: mongodb://root:example@mongo:27017/leavedb?authSource=admin&retryWrites=true&w=majority
