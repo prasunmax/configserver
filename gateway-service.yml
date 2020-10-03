@@ -1,6 +1,6 @@
 spring:
   mongodb:
-    uri: mongodb://root:example@localhost/assignment_user?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false&maxPoolSize=50&connectTimeoutMS=2000
+    uri: mongodb://root:example@mongo/assignment_user?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false&maxPoolSize=50&connectTimeoutMS=2000
     database: userAssignment
   cloud:
     gateway:
