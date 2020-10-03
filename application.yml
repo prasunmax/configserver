@@ -19,5 +19,11 @@ eureka:
   client:
     enabled: true
 spring:
+  boot:
+    admin:
+      client:
+        url: http://admin:8000
+        username: admin
+        password: admin
   rabbitmq:
     addresses: amqps://hvifsdtz:CkikAY7BrnXSjbppG4yMmLFV8mtPXzjo@finch.rmq.cloudamqp.com/hvifsdtz
