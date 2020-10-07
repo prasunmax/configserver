@@ -2,4 +2,8 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://learningdb:painkiller@learning-docdb.cdgqj.mongodb.net/learningdb?retryWrites=true&w=majority
+  servlet:
+    multipart:
+      max-file-size: 500KB
+      max-request-size: 500KB   
 
