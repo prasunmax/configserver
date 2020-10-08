@@ -23,6 +23,8 @@ spring:
         url: http://admin:8000
         username: admin
         password: admin
+        instance:
+          serviceBaseUrl: http://localhost:8000
   rabbitmq:
     addresses: amqps://hvifsdtz:CkikAY7BrnXSjbppG4yMmLFV8mtPXzjo@finch.rmq.cloudamqp.com/hvifsdtz
   sleuth:
