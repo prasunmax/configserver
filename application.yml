@@ -24,3 +24,9 @@ management:
       enabled: false
 server:
   port: 8000
+ zipkin:
+    baseUrl: http://zipkin-server:9411
+    locator:
+      discovery:
+        enabled: true
+    enabled: true
