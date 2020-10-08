@@ -3,17 +3,8 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: ${EUREKA_SERVER:http://registry:8000/eureka/}      
-spring:
-  boot:
-    admin:
-      client:
-        url: http://admin:8000
-        username: admin
-        password: admin
-  rabbitmq:
-    addresses: amqps://hvifsdtz:CkikAY7BrnXSjbppG4yMmLFV8mtPXzjo@finch.rmq.cloudamqp.com/hvifsdtz
-
+      defaultZone: ${EUREKA_SERVER:http://registry:8000/eureka/}
+    enabled: true
 management:
   endpoints:
     web:
@@ -24,9 +15,22 @@ management:
       enabled: false
 server:
   port: 8000
- zipkin:
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://admin:8000
+        username: admin
+        password: admin
+  rabbitmq:
+    addresses: amqps://hvifsdtz:CkikAY7BrnXSjbppG4yMmLFV8mtPXzjo@finch.rmq.cloudamqp.com/hvifsdtz
+  sleuth:
+    enabled: true
+  zipkin:
     baseUrl: http://zipkin-server:9411
     locator:
       discovery:
         enabled: true
     enabled: true
+
