@@ -3,3 +3,16 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://learningdb:painkiller@learning-docdb.cdgqj.mongodb.net/resource-service?retryWrites=true&w=majority
+  datasource:
+    name: ResourceDBDatasource
+    password: example
+    url: jdbc:mysql://mysql:3306/resource-db
+    username: root
+  jpa:
+    properties:
+      hibernate:
+        format_sql: false
+        show_sql: false
+        use_sql_comments: false
+    hibernate:
+      ddl-auto: none
