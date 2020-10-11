@@ -23,6 +23,19 @@ spring:
               args:
                 name: finance-service
                 fallbackuri: forward:/financeServiceFallback
+        - id: resource-service
+          uri: lb://resource-service
+          predicates:
+            - Path=/api/finance/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: resource-service
+                fallbackuri: forward:/resourceServiceFallback
+        - id: zipkin-service
+          uri: http://zipkin-server:9411
+          predicates:
+            - Path=/api/v2/**
 hystrix:
   command:
     fallback:
