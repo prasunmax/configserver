@@ -36,3 +36,7 @@ spring:
         enabled: true
     enabled: true
 
+microservices:
+  endpoints:
+    endpoint:
+      resource-service: resource-service
