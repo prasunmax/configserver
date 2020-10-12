@@ -40,3 +40,6 @@ microservices:
   endpoints:
     endpoint:
       resource-service: resource-service
+resource-service:
+  ribbon:
+    listOfServers: resource-service
