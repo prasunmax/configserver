@@ -4,7 +4,8 @@ training-service:
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://learningdb:painkiller@learning-docdb.cdgqj.mongodb.net/learningdb?retryWrites=true&w=majority
+      #uri: mongodb+srv://learningdb:painkiller@learning-docdb.cdgqj.mongodb.net/learningdb?retryWrites=true&w=majority
+      uri: mongodb://root:example@mongo/learningdb?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false&maxPoolSize=50&connectTimeoutMS=2000
   http:
     multipart:
       enabled: true
