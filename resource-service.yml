@@ -2,7 +2,8 @@
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://learningdb:painkiller@learning-docdb.cdgqj.mongodb.net/resource-service?retryWrites=true&w=majority
+      #uri: mongodb+srv://learningdb:painkiller@learning-docdb.cdgqj.mongodb.net/resource-service?retryWrites=true&w=majority
+      uri: mongodb://root:example@mongo:27017/resource-service?authSource=admin&retryWrites=true&w=majority
   datasource:
     name: ResourceDBDatasource
     password: example
