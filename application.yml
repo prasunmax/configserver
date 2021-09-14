@@ -13,8 +13,7 @@ management:
   health:
     mongo:
       enabled: false
-server:
-  port: 8000
+
 
 spring:
   boot:
