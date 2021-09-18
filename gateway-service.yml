@@ -42,3 +42,12 @@ hystrix:
       isolation:
         thread:
           timeoutInMilliseconds: 5000 
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    register-with-eureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER:http://localhost:9004/eureka/}
+    enabled: true  
