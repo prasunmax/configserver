@@ -9,14 +9,6 @@ management:
 
 
 spring:
-  boot:
-    admin:
-      client:
-        url: http://admin:8000
-        username: admin
-        password: admin
-        instance:
-          serviceBaseUrl: http://localhost:8000
   rabbitmq:
     addresses: amqps://dhcxlxdj:70adYZsIy6jtiJY4_fuKtA3kkepE_wqe@puffin.rmq2.cloudamqp.com/dhcxlxdj
   sleuth:
