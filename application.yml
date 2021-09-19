@@ -19,7 +19,11 @@ spring:
       discovery:
         enabled: true
     enabled: true
-
+  cloud:
+    bus:
+      enabled: true
+      refresh:
+        enabled: true 
 microservices:
   endpoints:
     endpoint:
