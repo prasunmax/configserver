@@ -9,6 +9,9 @@ management:
 
 
 spring:
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
   rabbitmq:
     addresses: amqps://dhcxlxdj:70adYZsIy6jtiJY4_fuKtA3kkepE_wqe@puffin.rmq2.cloudamqp.com/dhcxlxdj
   sleuth:
