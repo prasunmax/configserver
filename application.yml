@@ -27,6 +27,9 @@ spring:
       enabled: true
       refresh:
         enabled: true 
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
 microservices:
   endpoints:
     endpoint:
