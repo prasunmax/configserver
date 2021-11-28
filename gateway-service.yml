@@ -32,6 +32,15 @@ spring:
               args:
                 name: resource-service
                 fallbackuri: forward:/resourceServiceFallback
+        - id: user-service
+          uri: lb://resource-service
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: resource-service
+                fallbackuri: forward:/resourceServiceFallback
         - id: zipkin-service
           uri: http://zipkin-server:9411
           predicates:
